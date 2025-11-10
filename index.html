@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro User Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>User Management System</h1>
+
+      <form id="user-form">
+        <input type="hidden" id="user-id" />
+        <div class="field">
+          <input id="name" placeholder="Full Name" required minlength="2" />
+        </div>
+        <div class="field">
+          <input id="email" type="email" placeholder="Email" required />
+        </div>
+        <div class="field">
+          <input
+            id="age"
+            type="number"
+            placeholder="Age"
+            required
+            min="1"
+            max="120"
+          />
+        </div>
+        <button type="submit" id="submit-btn">Add User</button>
+      </form>
+
+      <div class="table-container">
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
