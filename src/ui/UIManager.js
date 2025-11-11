@@ -76,7 +76,6 @@ export class UIManager {
     `).join('');
   }
 
-  // ✅ Edit user → pre-fill form
   editUser(id) {
     try {
       const u = this.#manager.getUser(id);
@@ -91,7 +90,6 @@ export class UIManager {
     }
   }
 
-  // ✅ Confirm delete
   async confirmDelete(id) {
     try {
       const u = this.#manager.getUser(id);
